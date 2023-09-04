@@ -1,13 +1,20 @@
 
-import './App.css';
 import Header from "../Header/Header";
+import React, {createContext, useState} from "react";
 import Content from "../Content/Content";
 
+export const GlobalContext = createContext({
+    displayPage: '',
+    setDisplayPage: (_) => {}
+});
+
 export default function App() {
+    const [displayPage, setDisplayPage] = useState('home');
+
     return (
-        <main>
-            <Header/>
+        <GlobalContext.Provider  value={{displayPage: displayPage, setDisplayPage: setDisplayPage}}>
+            <Header />
             <Content />
-        </main>
+        </GlobalContext.Provider>
     );
 }
