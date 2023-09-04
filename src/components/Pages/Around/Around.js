@@ -5,12 +5,12 @@ import {useState} from "react";
 import {mapData} from "./mapData";
 
 export default function Around() {
-    const isDesktop = useMediaQuery('(min-width:800px)')
+    const isDesktop = useMediaQuery('(min-width:800px)');
     const [value, setValue] = useState(0);
     const [map, setMap] = useState(mapData[0]);
 
     return (
-        <Stack flexDirection={isDesktop ? 'row' : 'column'} alignItems={'center'} my={'1em'} width={'100%'} sx={{maxWidth: '1024px'}}>
+        <Stack flexDirection={isDesktop ? 'row' : 'column'} alignItems={!isDesktop && 'center'} my={'1em'} width={'100%'} sx={{maxWidth: '1024px'}}>
             {isDesktop
                 ?
                     <Tabs
@@ -38,7 +38,7 @@ export default function Around() {
                         )}
                     </Select>
             }
-            <Stack width={'100%'} height={'500px'}>
+            <Stack width={'100%'} height={isDesktop ? '500px' : '450px'}>
                 <Map data={map} />
             </Stack>
         </Stack>

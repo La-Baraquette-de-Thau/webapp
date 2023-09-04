@@ -1,5 +1,5 @@
 
-import {Stack} from "@mui/material";
+import {Stack, useMediaQuery} from "@mui/material";
 import {createElement, useContext} from "react";
 import {GlobalContext} from "../App/App";
 import Home from "../Pages/Home/Home";
@@ -15,11 +15,12 @@ const PAGES = {
 }
 
 export default function Content() {
+    const isDesktop = useMediaQuery('(min-width:800px)');
     const { displayPage } = useContext(GlobalContext)
 
     return (
         <main>
-            <Stack height={'calc(100vh - 80px)'} justifyContent={'center'} alignItems={'center'}>
+            <Stack height={`calc(100vh - ${isDesktop ? '60px' : '136px'})`} justifyContent={isDesktop ? 'center' : 'start'} alignItems={'center'}>
                 {createElement(PAGES[displayPage])}
             </Stack>
         </main>
