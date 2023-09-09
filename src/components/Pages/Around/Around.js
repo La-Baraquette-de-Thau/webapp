@@ -39,7 +39,7 @@ export default function Around() {
                     </Select>
             }
             <Stack width={'100%'} height={isDesktop ? '500px' : '450px'}>
-                <Map data={map} />
+                <Map to={map} />
             </Stack>
         </Stack>
     );
