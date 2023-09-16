@@ -1,16 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.39dd72d8.css",
-    "main.js": "/static/js/main.899e22df.js",
+    "main.js": "/static/js/main.68afb64b.js",
     "static/js/787.994511a4.chunk.js": "/static/js/787.994511a4.chunk.js",
+    "static/media/museumMarker.svg": "/static/media/museumMarker.c95984396b02a585b9cc2a536d8a2760.svg",
     "index.html": "/index.html",
-    "static/media/positionMarker.svg": "/static/media/positionMarker.41af16ab5076c6a3e33f9d27af60a41e.svg",
+    "static/media/positionMarker.svg": "/static/media/positionMarker.abee48549734e27f447e04480537d7b6.svg",
+    "static/media/cityMarker.svg": "/static/media/cityMarker.16581d0c11a66e8b87d875ffdb1c72c3.svg",
     "main.39dd72d8.css.map": "/static/css/main.39dd72d8.css.map",
-    "main.899e22df.js.map": "/static/js/main.899e22df.js.map",
+    "main.68afb64b.js.map": "/static/js/main.68afb64b.js.map",
     "787.994511a4.chunk.js.map": "/static/js/787.994511a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39dd72d8.css",
-    "static/js/main.899e22df.js"
+    "static/js/main.68afb64b.js"
   ]
 }
