@@ -9,7 +9,6 @@ import L from 'leaflet';
 import museumMarker from '../../assets/icn/museumMarker.svg';
 import cityMarker from '../../assets/icn/cityMarker.svg';
 import {Box, Typography} from "@mui/material";
-import {useState} from "react";
 
 const toIcon = {
     'museum' : museumMarker,
