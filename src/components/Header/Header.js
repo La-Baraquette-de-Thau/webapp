@@ -45,7 +45,14 @@ export default function Header() {
                             showLabels
                             value={displayPage}
                             onChange={(event, value) => setDisplayPage(value)}
-                            sx={{position: 'fixed', bottom: 0, width: '100%', backgroundColor: 'secondary.main', paddingY: '10px', zIndex: 100}}
+                            sx={{position: 'fixed', bottom: 0, width: '100%', paddingY: '10px', zIndex: 100,
+                                bgcolor: 'primary.main',
+                                '& .Mui-selected': {
+                                    '& .MuiSvgIcon-root, & .MuiBottomNavigationAction-label': {
+                                        color: 'secondary.main'
+                                    }
+                                }
+                            }}
                         >
                             {PAGES_DATA.map((page) =>
                                 <BottomNavigationAction key={'MenuButton' + page.value} value={page.value} label={page.name} icon={page.icn} />
