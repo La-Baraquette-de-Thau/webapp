@@ -1,5 +1,5 @@
 
-import {Stack, Tabs, Tab, useMediaQuery, MenuItem, FormControl, InputLabel, Select} from "@mui/material";
+import {Stack, Tabs, Tab, useMediaQuery, MenuItem, Select} from "@mui/material";
 import Map from "../../Map/Map";
 import {useState} from "react";
 import {mapData} from "./mapData";
@@ -10,7 +10,13 @@ export default function Around() {
     const [map, setMap] = useState(mapData[0]);
 
     return (
-        <Stack flexDirection={isDesktop ? 'row' : 'column'} alignItems={!isDesktop && 'center'} my={'1em'} width={'100%'} sx={{maxWidth: '1024px'}}>
+        <Stack
+            flexDirection={isDesktop ? 'row' : 'column'}
+            alignItems={!isDesktop && 'center'}
+            mt={!isDesktop && '1em'}
+            width={'100%'}
+            height={isDesktop ? '80%' : '100%'}
+            sx={{maxWidth: '1024px'}}>
             {isDesktop
                 ?
                     <Tabs
@@ -38,7 +44,7 @@ export default function Around() {
                         )}
                     </Select>
             }
-            <Stack width={'100%'} height={isDesktop ? '500px' : '450px'}>
+            <Stack width={'100%'} height={'100%'}>
                 <Map to={map} />
             </Stack>
         </Stack>
