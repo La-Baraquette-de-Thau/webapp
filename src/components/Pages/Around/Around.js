@@ -1,6 +1,6 @@
 
 import {Stack, Tabs, Tab, useMediaQuery, MenuItem, Select} from "@mui/material";
-import Map from "../../Map/Map";
+import Map from "../../../features/Map/Map";
 import {useState} from "react";
 import {mapData} from "./mapData";
 

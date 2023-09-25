@@ -41,6 +41,12 @@ export default function Map({ to }) {
             scrollWheelZoom={false}
             zoomControl={false}
             attributionControl={false}
+            dragging={false}
+            doubleClickZoom={false}
+            boxZoom={false}
+            keyboard={false}
+            tap={false}
+            touchZoom={false}
         >
             <Box
                 px={1}
