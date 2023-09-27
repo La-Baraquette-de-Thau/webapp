@@ -1,5 +1,5 @@
 
-import {Box, Button, ImageList, ImageListItem, useMediaQuery} from "@mui/material";
+import {Box, ImageList, ImageListItem, useMediaQuery} from "@mui/material";
 import SwipeableViews from 'react-swipeable-views-react-18-fix';
 import { autoPlay } from 'react-swipeable-views-utils';
 import {useState} from "react";
