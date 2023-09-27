@@ -2,7 +2,10 @@
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import {Stack, useMediaQuery} from "@mui/material";
+import {Fab, Stack, useMediaQuery} from "@mui/material";
+import {useState} from "react";
+import ViewPicture from "../../../features/ViewPicture/ViewPicture";
+import {ArrowUpwardRounded} from "@mui/icons-material";
 import image1 from './img/1.jpg'
 import image2 from './img/2.jpg'
 import image3 from './img/3.jpg'
@@ -43,8 +46,6 @@ import image37 from './img/37.jpg'
 import image38 from './img/38.jpg'
 import image39 from './img/39.jpg'
 import image40 from './img/40.jpg'
-import {useState} from "react";
-import ViewPicture from "../../../features/ViewPicture/ViewPicture";
 
 export default function Picture() {
     const isDesktop = useMediaQuery('(min-width:800px)');
@@ -54,7 +55,7 @@ export default function Picture() {
         <>
             <ViewPicture imgData={viewPictureModal} close={() => setViewPictureModal(null)} />
             <Stack width={'100%'} height={'100%'} maxWidth={'1040px'}>
-                <ImageList cols={2} gap={isDesktop ? 10 : 5} sx={{ mx: isDesktop ? 0 : 1, overflowY: 'inherit', pb: isDesktop ? '20px' : '92px' }}>
+                <ImageList cols={isDesktop ? 3 : 2} gap={isDesktop ? 10 : 5} sx={{ mx: isDesktop ? 0 : 1, overflowY: 'inherit', pb: isDesktop ? '20px' : '92px' }}>
                     {itemData.map((item) => (
                         <ImageListItem key={item.img} onClick={() => setViewPictureModal(item.img)}>
                             <img
@@ -71,6 +72,13 @@ export default function Picture() {
                     ))}
                 </ImageList>
             </Stack>
+            <Fab
+                color="primary"
+                sx={{position: 'fixed', bottom: isDesktop ? 16 : 92, right: 16}}
+                href={'#header'}
+            >
+                <ArrowUpwardRounded />
+            </Fab>
         </>
     );
 }
