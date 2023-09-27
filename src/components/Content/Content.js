@@ -16,11 +16,18 @@ const PAGES = {
 
 export default function Content() {
     const isDesktop = useMediaQuery('(min-width:800px)');
-    const { displayPage } = useContext(GlobalContext)
+    const { displayPage } = useContext(GlobalContext);
 
     return (
-        <main>
-            <Stack height={`calc(100vh - ${isDesktop ? '60px' : '136px'})`} justifyContent={isDesktop ? 'center' : 'start'} alignItems={'center'}>
+        <main style={{display: 'flex', justifyContent: 'center'}}>
+            <Stack
+                width={'100%'}
+                maxWidth={'1040px'}
+                minHeight={`calc(100vh - ${isDesktop ? '60px' : '136px'})`}
+                justifyContent={isDesktop ? 'center' : 'start'}
+                alignItems={'center'}
+                gap={2}
+            >
                 {createElement(PAGES[displayPage])}
             </Stack>
         </main>
