@@ -1,8 +1,10 @@
 
-import {Box, ImageList, ImageListItem, useMediaQuery} from "@mui/material";
+import {Box, Button, ImageList, ImageListItem, useMediaQuery} from "@mui/material";
 import SwipeableViews from 'react-swipeable-views-react-18-fix';
 import { autoPlay } from 'react-swipeable-views-utils';
 import {useState} from "react";
+import {Carousel} from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import image1 from "../../components/Pages/Picture/img/1.jpg";
 import image2 from "../../components/Pages/Picture/img/2.jpg";
 import image3 from "../../components/Pages/Picture/img/3.jpg";
@@ -30,7 +32,7 @@ export default function PictureSlider() {
                 variant="quilted"
                 cols={4}
                 rowHeight={isDesktop ? 190 : 80}
-                style={{margin: 0, width: '100%'}}
+                style={{margin: 0, width: '100%', position: 'relative'}}
             >
                 {itemData.map(item =>
                     <ImageListItem key={item.alt} cols={item.cols} rows={item.rows}>
@@ -44,21 +46,23 @@ export default function PictureSlider() {
                 onChangeIndex={(step) => setActiveStep(step)}
                 enableMouseEvents
             >
-                {itemData.map(item =>
-                    <div key={item.alt}>
-                        <Box
-                            component="img"
-                            sx={{
-                                height: 255,
-                                display: 'block',
-                                overflow: 'hidden',
-                                width: '100%',
-                            }}
-                            src={item.img}
-                            alt={item.alt}
-                        />
-                    </div>
-                )}
+                <Carousel useKeyboardArrows={true} showStatus={false} showThumbs={false}>
+                    {itemData.map(image =>
+                        <div key={image.alt}>
+                            <Box
+                                component="img"
+                                sx={{
+                                    height: 255,
+                                    display: 'block',
+                                    overflow: 'hidden',
+                                    width: '100%',
+                                }}
+                                src={image.img}
+                                alt={image.alt}
+                            />
+                        </div>
+                    )}
+                </Carousel>
             </AutoPlaySwipeableViews>
     );
 }
