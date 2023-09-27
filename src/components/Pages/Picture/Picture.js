@@ -2,7 +2,7 @@
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import {Stack} from "@mui/material";
+import {Stack, useMediaQuery} from "@mui/material";
 import image1 from './img/1.jpg'
 import image2 from './img/2.jpg'
 import image3 from './img/3.jpg'
@@ -43,41 +43,49 @@ import image37 from './img/37.jpg'
 import image38 from './img/38.jpg'
 import image39 from './img/39.jpg'
 import image40 from './img/40.jpg'
+import {useState} from "react";
+import ViewPicture from "../../../features/ViewPicture/ViewPicture";
 
 export default function Picture() {
+    const isDesktop = useMediaQuery('(min-width:800px)');
+    const [viewPictureModal, setViewPictureModal] = useState(null);
+
     return (
-        <Stack width={'100%'} height={'100%'} maxWidth={'1040px'} >
-            <ImageList sx={{ overflowY: 'inherit' }}>
-                {itemData.map((item) => (
-                    <ImageListItem key={item.img}>
-                        <img
-                            srcSet={item.img}
-                            src={item.img}
-                            alt={item.title}
-                            loading="lazy"
-                        />
-                        <ImageListItemBar
-                            title={item.title}
-                            sx={{bgcolor: 'rgba(255, 255, 255, 0.54)'}}
-                        />
-                    </ImageListItem>
-                ))}
-            </ImageList>
-        </Stack>
+        <>
+            <ViewPicture imgData={viewPictureModal} close={() => setViewPictureModal(null)} />
+            <Stack width={'100%'} height={'100%'} maxWidth={'1040px'}>
+                <ImageList cols={2} gap={isDesktop ? 10 : 5} sx={{ mx: isDesktop ? 0 : 1, overflowY: 'inherit', pb: isDesktop ? '20px' : '92px' }}>
+                    {itemData.map((item) => (
+                        <ImageListItem key={item.img} onClick={() => setViewPictureModal(item.img)}>
+                            <img
+                                srcSet={item.img}
+                                src={item.img}
+                                alt={item.title}
+                                style={{height: isDesktop ? '300px' : '200px'}}
+                            />
+                            <ImageListItemBar
+                                title={item.title}
+                                sx={{bgcolor: 'rgba(33, 150, 243, 0.54)'}}
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
+            </Stack>
+        </>
     );
 }
 
 const itemData = [
-    {img: image1, title: 'Breakfast'},
-    {img: image2, title: 'Burger'},
-    {img: image3, title: 'Camera'},
-    {img: image4, title: 'Coffee'},
-    {img: image5, title: 'Hats'},
-    {img: image6, title: 'Honey'},
-    {img: image7, title: 'Basketball'},
-    {img: image8, title: 'Fern'},
-    {img: image9, title: 'Mushrooms'},
-    {img: image10, title: 'Tomato basil'},
+    {img: image1, title: 'Vue Extérieur'},
+    {img: image2, title: 'Décorations'},
+    {img: image3, title: 'Salle de bain'},
+    {img: image4, title: 'Cuisine'},
+    {img: image5, title: 'Étang de Thau'},
+    {img: image6, title: 'Décorations'},
+    {img: image7, title: 'Salon'},
+    {img: image8, title: 'Cuisine'},
+    {img: image9, title: 'Terrasse'},
+    {img: image10, title: 'Cuisine'},
     {img: image11, title: 'Sea star'},
     {img: image12, title: 'Bike'},
     {img: image13, title: 'Bike'},
