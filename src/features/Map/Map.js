@@ -8,11 +8,15 @@ import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 import museumMarker from '../../assets/icn/museumMarker.svg';
 import cityMarker from '../../assets/icn/cityMarker.svg';
+import groceryMarker from '../../assets/icn/groceryMarker.svg';
+import movieMarker from '../../assets/icn/movieMarker.svg';
 import {Box, Typography} from "@mui/material";
 
 const toIcon = {
     'museum' : museumMarker,
-    'city' : cityMarker
+    'city' : cityMarker,
+    'grocery': groceryMarker,
+    'movie': movieMarker
 }
 
 export default function Map({ to }) {
