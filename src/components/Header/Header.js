@@ -1,8 +1,9 @@
 
-import {BottomNavigation, BottomNavigationAction, Button, Stack, Typography, useMediaQuery} from "@mui/material";
+import {BottomNavigation, BottomNavigationAction, Button, Stack, useMediaQuery} from "@mui/material";
 import {useContext} from "react";
 import {GlobalContext} from "../App/App";
 import {ContactPageRounded, DescriptionRounded, LocationOnRounded, Panorama} from "@mui/icons-material";
+import logoInline from '../../assets/icn/logoInline2.svg'
 
 const PAGES_DATA = [
     {name: 'Accueil', value: 'home', icn: <DescriptionRounded />},
@@ -25,7 +26,7 @@ export default function Header() {
                 alignItems={'center'}
                 sx={{maxWidth: '1040px'}}
             >
-                <Typography color={'white'} fontWeight={'bold'} fontSize={'1.5rem'}>LA BARAQUETTE DE THAU</Typography>
+                <img src={logoInline} height={'100%'}  alt={'Inline logo site'}/>
                 {isDesktop
                     ?
                         <Stack flexDirection={'row'} gap={2}>
