@@ -75,7 +75,7 @@ export default function Picture() {
             <Fab
                 color="primary"
                 sx={{position: 'fixed', bottom: isDesktop ? 16 : 92, right: 16}}
-                href={'#header'}
+                href={'#'}
             >
                 <ArrowUpwardRounded />
             </Fab>
