@@ -21,7 +21,7 @@ export default function Around() {
         <Stack
             width={'100%'}
             height={`calc(100vh - ${isDesktop ? '60px' : '136px'})`}
-            alignItems={'center'}
+            justifyContent={'center'}
             gap={!isDesktop && 1}
             sx={{maxWidth: '1024px'}}
         >
@@ -40,7 +40,7 @@ export default function Around() {
                 flexDirection={isDesktop ? 'row' : 'column'}
                 alignItems={!isDesktop && 'center'}
                 width={'100%'}
-                height={'100%'}
+                height={isDesktop ? '85%' : '100%'}
             >
                 {isDesktop
                     ?
