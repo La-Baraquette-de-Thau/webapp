@@ -55,7 +55,11 @@ export default function Picture() {
         <>
             <ViewPicture imgData={viewPictureModal} close={() => setViewPictureModal(null)} />
             <Stack width={'100%'} height={'100%'} maxWidth={'1040px'}>
-                <ImageList cols={isDesktop ? 3 : 2} gap={isDesktop ? 10 : 5} sx={{ mx: isDesktop ? 0 : 1, overflowY: 'inherit', pb: isDesktop ? '20px' : '92px' }}>
+                <ImageList
+                    cols={isDesktop ? 3 : 2}
+                    gap={isDesktop ? 10 : 5}
+                    sx={{ mx: isDesktop ? 0 : 1, overflowY: 'inherit' }}
+                >
                     {itemData.map((item) => (
                         <ImageListItem key={item.img} onClick={() => setViewPictureModal(item.img)}>
                             <img

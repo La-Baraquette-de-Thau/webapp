@@ -20,10 +20,10 @@ export default function Around() {
     return (
         <Stack
             width={'100%'}
+            height={`calc(100vh - ${isDesktop ? '60px' : '136px'})`}
             alignItems={'center'}
             gap={!isDesktop && 1}
             sx={{maxWidth: '1024px'}}
-            height={isDesktop ? '90%' : '100%'}
         >
             <ToggleButtonGroup
                 value={category}

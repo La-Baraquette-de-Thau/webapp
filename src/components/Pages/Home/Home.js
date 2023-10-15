@@ -5,19 +5,19 @@ import PictureSlider from "../../../features/PictureSlider/PictureSlider";
 export default function Home() {
 
     return (
-        <>
-            <Divider flexItem variant={'middle'} sx={{marginTop: 2}}><Chip label="Quelques photos ?" /></Divider>
+        <Stack alignItems={'center'} gap={2} sx={{paddingY: '20px'}}>
+            <Divider flexItem variant={'middle'}><Chip label="Quelques photos ?" /></Divider>
             <PictureSlider />
             <Divider flexItem variant={'middle'}><Chip label="À propos de ce logement" /></Divider>
             <Description />
-        </>
+        </Stack>
     );
 }
 
 function Description() {
 
     return (
-        <Stack width={'80%'} sx={{marginBottom: 'calc(32px + 60px)'}}>
+        <Stack width={'80%'}>
             <Typography textAlign={'justify'}>
                 La "Baraquette", un havre de paix au coeur de la verdure, â proximité à pied des plages, de la ville,
                 ses commerces, ses Halles.
@@ -30,6 +30,11 @@ function Description() {
             </Typography>
             <br/>
             <Typography fontWeight={'bold'} >Le logement</Typography>
+            <Typography>
+                Studio neuf avec cuisine toute équipée, chambre indépendante avec claustra amovible qui vous isolera de
+                la partie jour. Deux jardins à votre disposition, un face à la porte d'entrée et l'autre en hauteur avec
+                vue sur Sète. Entrée indépendante avec parking devant la "Baraquette".
+            </Typography>
             <Typography>
                 Studio neuf avec cuisine toute équipée, chambre indépendante avec claustra amovible qui vous isolera de
                 la partie jour. Deux jardins à votre disposition, un face à la porte d'entrée et l'autre en hauteur avec

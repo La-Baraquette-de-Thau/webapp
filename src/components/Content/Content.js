@@ -19,11 +19,11 @@ export default function Content() {
     const { displayPage } = useContext(GlobalContext);
 
     return (
-        <main style={{display: 'flex', justifyContent: 'center'}}>
+        <main style={{display: 'flex', justifyContent: 'center', overflowY: 'auto', maxHeight: `calc(100vh - ${isDesktop ? '60px' : '136px'})`}}>
             <Stack
                 width={'100%'}
                 maxWidth={'1040px'}
-                minHeight={`calc(100vh - ${isDesktop ? '60px' : '136px'})`}
+                height={'100%'}
                 justifyContent={isDesktop ? 'center' : 'start'}
                 alignItems={'center'}
                 gap={2}

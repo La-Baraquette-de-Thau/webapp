@@ -32,7 +32,7 @@ export default function PictureSlider() {
                 variant="quilted"
                 cols={4}
                 rowHeight={isDesktop ? 190 : 80}
-                style={{margin: 0, width: '100%', position: 'relative'}}
+                style={{width: '100%', minHeight: '384px', margin: 0}}
             >
                 {itemData.map(item =>
                     <ImageListItem key={item.alt} cols={item.cols} rows={item.rows}>

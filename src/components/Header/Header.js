@@ -17,7 +17,7 @@ export default function Header() {
     const { displayPage, setDisplayPage } = useContext(GlobalContext);
 
     return (
-        <Stack width={'100%'} alignItems={'center'} sx={{backgroundColor: 'primary.main'}} id={'header'}>
+        <Stack width={'100%'} alignItems={'center'} sx={{backgroundColor: 'primary.main'}}>
             <Stack
                 flexDirection={'row'}
                 width={'100%'}
