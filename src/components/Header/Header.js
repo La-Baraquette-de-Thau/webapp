@@ -2,12 +2,19 @@
 import {BottomNavigation, BottomNavigationAction, Button, Stack, useMediaQuery} from "@mui/material";
 import {useContext} from "react";
 import {GlobalContext} from "../App/App";
-import {ContactPageRounded, DescriptionRounded, LocationOnRounded, Panorama} from "@mui/icons-material";
+import {
+    ConstructionRounded,
+    ContactPageRounded,
+    DescriptionRounded,
+    LocationOnRounded,
+    Panorama
+} from "@mui/icons-material";
 import logoInline from '../../assets/icn/logoInline2.svg'
 
 const PAGES_DATA = [
     {name: 'Accueil', value: 'home', icn: <DescriptionRounded />},
     {name: 'Photos', value: 'picture', icn: <Panorama />},
+    {name: 'Équipements', value: 'equipment', icn: <ConstructionRounded />},
     {name: 'Alentours', value: 'around', icn: <LocationOnRounded/>},
     {name: 'Contact', value: 'contact', icn: <ContactPageRounded />}
 ]

@@ -6,12 +6,14 @@ import Home from "../Pages/Home/Home";
 import Around from "../Pages/Around/Around";
 import Contact from "../Pages/Contact/Contact";
 import Picture from "../Pages/Picture/Picture";
+import Equipment from "../Pages/Equipment/Equipment";
 
 const PAGES = {
     home: Home,
     around: Around,
     contact: Contact,
-    picture: Picture
+    picture: Picture,
+    equipment: Equipment
 }
 
 export default function Content() {
