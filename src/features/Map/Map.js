@@ -10,7 +10,8 @@ import museumMarker from '../../assets/icn/museumMarker.svg';
 import cityMarker from '../../assets/icn/cityMarker.svg';
 import groceryMarker from '../../assets/icn/groceryMarker.svg';
 import movieMarker from '../../assets/icn/movieMarker.svg';
-import {Box, Typography} from "@mui/material";
+import {Stack, Typography} from "@mui/material";
+import {DirectionsBike} from "@mui/icons-material";
 
 const toIcon = {
     'museum' : museumMarker,
@@ -52,7 +53,7 @@ export default function Map({ to }) {
             tap={false}
             touchZoom={false}
         >
-            <Box
+            <Stack
                 px={1}
                 py={0.5}
                 borderRadius={1.5}
@@ -65,15 +66,19 @@ export default function Map({ to }) {
                     transform: 'translateX(-50%)',
                     zIndex: 1000
                 }}
+                flexDirection={'row'}
+                gap={2}
+                alignItems={'center'}
             >
                 <Typography color={'secondary.main'} fontWeight={'bold'}>
                     {distance(to) < 1 ? (distance(to) * 100) + ' m' : distance(to) + ' Km'}
                 </Typography>
-            </Box>
+                {to.bikeAccess && <DirectionsBike color={'secondary'} />}
+            </Stack>
             <TileLayer url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png"/>
             {/*<TileLayer url="https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png"/>*/}
             <LayerGroup>
-                <Polyline pathOptions={{color: 'black', weight: 2, dashArray: '5,10'}} positions={[from, to.gps]} >
+                <Polyline pathOptions={{color: 'black', weight: 2, dashArray: '5,10'}} positions={[from, to.gps]}>
                     <Marker position={from} icon={fromIcon} alt={'Position icon'}>
                         <Tooltip direction="bottom" offset={[0, 15]} opacity={1} permanent>
                             Gîte

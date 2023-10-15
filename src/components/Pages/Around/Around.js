@@ -23,7 +23,7 @@ export default function Around() {
             alignItems={'center'}
             gap={!isDesktop && 1}
             sx={{maxWidth: '1024px'}}
-            height={isDesktop ? '80%' : '100%'}
+            height={isDesktop ? '90%' : '100%'}
         >
             <ToggleButtonGroup
                 value={category}
