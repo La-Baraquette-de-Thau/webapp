@@ -40,6 +40,41 @@ function Description() {
                 la partie jour. Deux jardins à votre disposition, un face à la porte d'entrée et l'autre en hauteur avec
                 vue sur Sète. Entrée indépendante avec parking devant la "Baraquette".
             </Typography>
+            <Typography>
+                Studio neuf avec cuisine toute équipée, chambre indépendante avec claustra amovible qui vous isolera de
+                la partie jour. Deux jardins à votre disposition, un face à la porte d'entrée et l'autre en hauteur avec
+                vue sur Sète. Entrée indépendante avec parking devant la "Baraquette".
+            </Typography>
+            <Typography>
+                Studio neuf avec cuisine toute équipée, chambre indépendante avec claustra amovible qui vous isolera de
+                la partie jour. Deux jardins à votre disposition, un face à la porte d'entrée et l'autre en hauteur avec
+                vue sur Sète. Entrée indépendante avec parking devant la "Baraquette".
+            </Typography>
+            <Typography>
+                Studio neuf avec cuisine toute équipée, chambre indépendante avec claustra amovible qui vous isolera de
+                la partie jour. Deux jardins à votre disposition, un face à la porte d'entrée et l'autre en hauteur avec
+                vue sur Sète. Entrée indépendante avec parking devant la "Baraquette".
+            </Typography>
+            <Typography>
+                Studio neuf avec cuisine toute équipée, chambre indépendante avec claustra amovible qui vous isolera de
+                la partie jour. Deux jardins à votre disposition, un face à la porte d'entrée et l'autre en hauteur avec
+                vue sur Sète. Entrée indépendante avec parking devant la "Baraquette".
+            </Typography>
+            <Typography>
+                Studio neuf avec cuisine toute équipée, chambre indépendante avec claustra amovible qui vous isolera de
+                la partie jour. Deux jardins à votre disposition, un face à la porte d'entrée et l'autre en hauteur avec
+                vue sur Sète. Entrée indépendante avec parking devant la "Baraquette".
+            </Typography>
+            <Typography>
+                Studio neuf avec cuisine toute équipée, chambre indépendante avec claustra amovible qui vous isolera de
+                la partie jour. Deux jardins à votre disposition, un face à la porte d'entrée et l'autre en hauteur avec
+                vue sur Sète. Entrée indépendante avec parking devant la "Baraquette".
+            </Typography>
+            <Typography>
+                Studio neuf avec cuisine toute équipée, chambre indépendante avec claustra amovible qui vous isolera de
+                la partie jour. Deux jardins à votre disposition, un face à la porte d'entrée et l'autre en hauteur avec
+                vue sur Sète. Entrée indépendante avec parking devant la "Baraquette".
+            </Typography>
             <br/>
             <Typography fontWeight={'bold'} >Accès des voyageurs</Typography>
             <Typography>
