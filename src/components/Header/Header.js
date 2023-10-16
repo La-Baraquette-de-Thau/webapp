@@ -24,7 +24,7 @@ export default function Header() {
     const { displayPage, setDisplayPage } = useContext(GlobalContext);
 
     return (
-        <Stack width={'100%'} alignItems={'center'} sx={{backgroundColor: 'primary.main'}}>
+        <Stack width={'100%'} alignItems={'center'} position={'fixed'} zIndex={1000} sx={{backgroundColor: '#093a5c'}}>
             <Stack
                 flexDirection={'row'}
                 width={'100%'}
@@ -55,9 +55,12 @@ export default function Header() {
                             onChange={(event, value) => setDisplayPage(value)}
                             sx={{position: 'fixed', bottom: 0, width: '100%', paddingY: '10px', zIndex: 100,
                                 bgcolor: 'primary.main',
+                                '& .MuiSvgIcon-root, & .MuiBottomNavigationAction-label': {
+                                    color: 'secondary.main'
+                                },
                                 '& .Mui-selected': {
                                     '& .MuiSvgIcon-root, & .MuiBottomNavigationAction-label': {
-                                        color: 'secondary.main'
+                                        color: 'info.main'
                                     }
                                 }
                             }}

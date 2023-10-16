@@ -6,7 +6,7 @@ import {
 const colorTheme = createTheme({
     palette: {
         primary: {
-            main: '#2196f3'
+            main: '#093a5c'
         },
         secondary: {
             main: '#FFFFFF'

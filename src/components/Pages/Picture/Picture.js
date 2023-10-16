@@ -70,7 +70,7 @@ export default function Picture() {
                             />
                             <ImageListItemBar
                                 title={item.title}
-                                sx={{bgcolor: 'rgba(33, 150, 243, 0.54)'}}
+                                sx={{bgcolor: 'rgba(9, 58, 92, 0.54)'}}
                             />
                         </ImageListItem>
                     ))}

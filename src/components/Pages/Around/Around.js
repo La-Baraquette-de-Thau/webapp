@@ -32,7 +32,7 @@ export default function Around() {
                     setValue(0);
                 }}
                 exclusive
-                color={'primary'}
+                color={'info'}
                 sx={{width: '100%', borderRadius: 0}}
             >
                 <ToggleButton sx={{width: '100%', borderRadius: 0}} value={'visit'}>Visiter</ToggleButton>
