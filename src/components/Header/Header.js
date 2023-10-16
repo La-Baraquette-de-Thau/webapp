@@ -24,7 +24,7 @@ export default function Header() {
     const { displayPage, setDisplayPage } = useContext(GlobalContext);
 
     return (
-        <Stack width={'100%'} alignItems={'center'} position={'fixed'} zIndex={1000} sx={{backgroundColor: '#093a5c'}}>
+        <Stack width={'100%'} alignItems={'center'} position={'fixed'} zIndex={1000} sx={{backgroundColor: '#093a5c', boxShadow: '0px 1px 10px black'}}>
             <Stack
                 flexDirection={'row'}
                 width={'100%'}
