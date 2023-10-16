@@ -7,6 +7,16 @@ import {
 } from "@mui/icons-material";
 
 export const equipmentData = [
+    {name: 'Chambre', list: [
+        {name: 'Lit deux places 140cm, draps et serviettes fourni', icon: <BedRounded color={'info'}/>},
+        {name: 'Mini dressing avec cintre', icon: <CheckroomRounded color={'info'}/>},
+        {name: 'Lit d’appoint sur roulette', icon: <SingleBedRounded color={'info'}/>}
+    ]},
+    {name: 'Salle de bain', list: [
+        {name: 'Sèche cheveux', icon: <ShowerRounded color={'info'} />},
+        {name: 'Savon et shampooing', icon: <SoapRounded color={'info'} />},
+        {name: 'Papier toilette', icon: <WcRounded color={'info'} />}
+    ]},
     {name: 'Extérieur', list: [
         {name: 'Place de Parking sur place', icon: <LocalParkingRounded color={'info'} />},
         {name: 'Mobilier extérieur', icon: <DeckRounded color={'info'} />},
@@ -36,15 +46,5 @@ export const equipmentData = [
         {name: '2 poubelles', icon: <DeleteRounded color={'info'}/>},
         {name: 'Seau balais, serpiere et aspirateur', icon: <CleaningServicesRounded color={'info'} />},
         {name: 'Fer à repasser', icon: <IronRounded color={'info'}/>},
-    ]},
-    {name: 'Chambre', list: [
-        {name: 'Lit deux places 140cm, draps et serviettes fourni', icon: <BedRounded color={'info'}/>},
-        {name: 'Mini dressing avec cintre', icon: <CheckroomRounded color={'info'}/>},
-        {name: 'Lit d’appoint sur roulette', icon: <SingleBedRounded color={'info'}/>}
-    ]},
-    {name: 'Salle de bain', list: [
-        {name: 'Sèche cheveux', icon: <ShowerRounded color={'info'} />},
-        {name: 'Savon et shampooing', icon: <SoapRounded color={'info'} />},
-        {name: 'Papier toilette', icon: <WcRounded color={'info'} />}
     ]}
 ]

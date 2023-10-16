@@ -10,17 +10,27 @@ import museumMarker from '../../assets/icn/museumMarker.svg';
 import cityMarker from '../../assets/icn/cityMarker.svg';
 import groceryMarker from '../../assets/icn/groceryMarker.svg';
 import movieMarker from '../../assets/icn/movieMarker.svg';
+import festivalMarker from '../../assets/icn/festivalMarker.svg';
+import restaurantMarker from '../../assets/icn/restaurantMarker.svg';
+import waterMarker from '../../assets/icn/waterMarker.svg';
+import icecreamMarker from '../../assets/icn/icecreamMarker.svg';
 import {Stack, Typography} from "@mui/material";
-import {DirectionsBike} from "@mui/icons-material";
+import {DirectionsBike, ExpandCircleDownRounded} from "@mui/icons-material";
+import {useState} from "react";
 
 const toIcon = {
     'museum' : museumMarker,
     'city' : cityMarker,
-    'grocery': groceryMarker,
-    'movie': movieMarker
+    'grocery' : groceryMarker,
+    'movie' : movieMarker,
+    'festival' : festivalMarker,
+    'water' : waterMarker,
+    'restaurant' : restaurantMarker,
+    'icecream' : icecreamMarker
 }
 
 export default function Map({ to }) {
+    const [displayDescription, setDisplayDescription] = useState(false);
     const from = [43.434449, 3.605627]
     const fromIcon = new Icon({
         iconUrl: positionMarker,
@@ -74,6 +84,7 @@ export default function Map({ to }) {
                     {distance(to) < 1 ? (distance(to) * 100) + ' m' : distance(to) + ' Km'}
                 </Typography>
                 {to.bikeAccess && <DirectionsBike color={'secondary'} />}
+                <ExpandCircleDownRounded color={'secondary'} />
             </Stack>
             <TileLayer url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png"/>
             {/*<TileLayer url="https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png"/>*/}

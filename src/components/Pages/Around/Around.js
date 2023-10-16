@@ -27,7 +27,10 @@ export default function Around() {
         >
             <ToggleButtonGroup
                 value={category}
-                onChange={(_, newValue) => setCategory(newValue)}
+                onChange={(_, newValue) => {
+                    setCategory(newValue);
+                    setValue(0);
+                }}
                 exclusive
                 color={'primary'}
                 sx={{width: '100%', borderRadius: 0}}
@@ -40,7 +43,7 @@ export default function Around() {
                 flexDirection={isDesktop ? 'row' : 'column'}
                 alignItems={!isDesktop && 'center'}
                 width={'100%'}
-                height={isDesktop ? '85%' : '100%'}
+                height={isDesktop ? '80%' : '100%'}
             >
                 {isDesktop
                     ?
@@ -51,8 +54,8 @@ export default function Around() {
                         onChange={(_, newValue) => setValue(newValue)}
                         sx={{ borderRight: 1, borderColor: 'divider', width: isDesktop ? '300px' : '100%'}}
                     >
-                        {categoryMapData.map((item) =>
-                            <Tab key={item.value} label={item.name} id={item.value} onClick={() => setSelectedMap(item)}/>
+                        {categoryMapData.map((item, index) =>
+                            <Tab key={index} label={item.name} id={item.value} onClick={() => setSelectedMap(item)}/>
                         )}
                     </Tabs>
                     :
@@ -62,8 +65,8 @@ export default function Around() {
                         onChange={(event) => setSelectedMap(categoryMapData[event.target.value])}
                         sx={{width: '85%', mb: 2}}
                     >
-                        {categoryMapData.map((item) =>
-                            <MenuItem key={item.value} value={item.value}>
+                        {categoryMapData.map((item, index) =>
+                            <MenuItem key={index} value={item.value}>
                                 {item.name}
                             </MenuItem>
                         )}
