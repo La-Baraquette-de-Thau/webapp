@@ -9,7 +9,7 @@ import {
     LocationOnRounded,
     Panorama
 } from "@mui/icons-material";
-import logoInline from '../../assets/icn/logoInline2.svg'
+import logoInline from '../../assets/icn/logoInlineSvg.svg'
 
 const PAGES_DATA = [
     {name: 'Accueil', value: 'home', icn: <DescriptionRounded />},
@@ -33,7 +33,7 @@ export default function Header() {
                 alignItems={'center'}
                 sx={{maxWidth: '1040px'}}
             >
-                <img src={logoInline} height={'100%'}  alt={'Inline logo site'}/>
+                <img src={logoInline} height={'80%'}  alt={'Inline logo site'}/>
                 {isDesktop
                     ?
                         <Stack flexDirection={'row'} gap={2}>
