@@ -20,7 +20,7 @@ export default function Around() {
     return (
         <Stack
             width={'100%'}
-            height={`calc(100dvh - ${isDesktop ? '60px' : '136px'})`}
+            height={`calc(100svh - ${isDesktop ? '60px' : '136px'})`}
             justifyContent={'center'}
             gap={!isDesktop && 1}
             sx={{maxWidth: '1024px'}}

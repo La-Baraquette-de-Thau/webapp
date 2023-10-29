@@ -7,7 +7,7 @@ export default function Contact() {
     const isDesktop = useMediaQuery('(min-width:800px)');
 
     return (
-        <Stack justifyContent={'center'} alignItems={'center'} maxWidth={'500px'} gap={3} height={`calc(100dvh - ${isDesktop ? '60px' : '136px'})`}>
+        <Stack justifyContent={'center'} alignItems={'center'} maxWidth={'500px'} gap={3} height={`calc(100svh - ${isDesktop ? '60px' : '136px'})`}>
             <Avatar alt="Remy Sharp" src={avatarImage} sx={{ width: 250, height: 250 }} />
             <Typography>La présentation</Typography>
             <Stack flexDirection={isDesktop ? 'row' : 'column'} alignItems={'center'} gap={2}>

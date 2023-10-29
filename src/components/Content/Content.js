@@ -26,7 +26,7 @@ export default function Content() {
                 display: 'flex',
                 justifyContent: 'center',
                 paddingTop: '60px',
-                maxHeight: `calc(100dvh - ${isDesktop ? '60px' : '136px'})`,
+                maxHeight: `calc(100svh - ${isDesktop ? '60px' : '136px'})`,
             }}
         >
             <Stack
