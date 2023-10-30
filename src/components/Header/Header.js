@@ -60,7 +60,7 @@ export default function Header() {
                                 },
                                 '& .Mui-selected': {
                                     '& .MuiSvgIcon-root, & .MuiBottomNavigationAction-label': {
-                                        color: 'info.main'
+                                        color: 'third.main'
                                     }
                                 }
                             }}

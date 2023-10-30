@@ -53,7 +53,7 @@ export default function Map({ to }) {
             zoom={to.zoom}
             style={{height: '100%', width: '100%'}}
             scrollWheelZoom={false}
-            zoomControl={false}
+            zoomControl={true}
             attributionControl={false}
             dragging={false}
             doubleClickZoom={false}
