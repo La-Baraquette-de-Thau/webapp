@@ -15,7 +15,7 @@ import restaurantMarker from '../../assets/icn/restaurantMarker.svg';
 import waterMarker from '../../assets/icn/waterMarker.svg';
 import icecreamMarker from '../../assets/icn/icecreamMarker.svg';
 import {Stack, Typography} from "@mui/material";
-import {DirectionsBike, ExpandCircleDownRounded} from "@mui/icons-material";
+import {DirectionsBike} from "@mui/icons-material";
 import {useState} from "react";
 
 const toIcon = {
@@ -30,7 +30,6 @@ const toIcon = {
 }
 
 export default function Map({ to }) {
-    const [displayDescription, setDisplayDescription] = useState(false);
     const from = [43.434449, 3.605627]
     const fromIcon = new Icon({
         iconUrl: positionMarker,
@@ -84,8 +83,8 @@ export default function Map({ to }) {
                     {distance(to) < 1 ? (distance(to) * 100) + ' m' : distance(to) + ' Km'}
                 </Typography>
                 {to.bikeAccess && <DirectionsBike color={'secondary'} />}
-                <ExpandCircleDownRounded color={'secondary'} />
             </Stack>
+            <MapDescription text={to.description} />
             <TileLayer url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png"/>
             {/*<TileLayer url="https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png"/>*/}
             <LayerGroup>
@@ -105,3 +104,40 @@ export default function Map({ to }) {
         </MapContainer>
     );
 };
+
+function MapDescription({ text }) {
+    const [displayDescription, setDisplayDescription] = useState(false);
+
+    return(
+        <Stack
+            width={'80%'} px={2} py={1} borderRadius={1.5} flexDirection={'row'} alignItems={'center'} gap={2}
+            sx={{
+                backgroundColor: 'primary.main',
+                opacity: 0.75,
+                position: 'absolute',
+                bottom: 10,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                zIndex: 1000
+            }}
+        >
+            <Typography textAlign={'justify'} color={'secondary.main'} sx={{whiteSpace: displayDescription ? 'none' : 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis'}}>
+                {text}
+            </Typography>
+            <Typography
+                onClick={() => setDisplayDescription(!displayDescription)}
+                color={'third.main'}
+                fontSize={'1rem'}
+                fontWeight={'bold'}
+                sx={{
+                    '&:hover': {
+                        textDecoration: 'underline',
+                        cursor: 'pointer'
+                    },
+                }}
+            >
+                {displayDescription ? 'Masquer' : 'Développer'}
+            </Typography>
+        </Stack>
+    );
+}

@@ -10,6 +10,9 @@ const colorTheme = createTheme({
         },
         secondary: {
             main: '#FFFFFF'
+        },
+        third: {
+            main: '#d5af9c'
         }
     }
 });
