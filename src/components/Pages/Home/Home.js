@@ -52,24 +52,26 @@ export default function Home() {
                    backgroundSize: 'cover',
                 }}
             >
-                <Stack width={'90%'} maxWidth={'1040px'} gap={3} borderRadius={'10px'} sx={{backgroundColor: 'rgba(0, 0, 0, 0.4)'}}>
-                    <Typography color={'primary'} fontWeight={'bold'} fontSize={'1.5rem'} textAlign={'center'}>
-                        À propos de ce logement
-                    </Typography>
-                    <Typography color={'secondary'}>
-                        La "Baraquette", un havre de paix au cœur de la verdure, à proximité à pied des plages, de la
-                        ville, ses commerces, ses Halles.
-                    </Typography>
-                    <Typography color={'secondary'}>
-                        Venez vous ressourcer et découvrir la région, piste cyclable à moins de 2 mn qui vous offre la
-                        possibilité de faire le tour de l'étang en passant par Bouzigues et ses huîtres, Balaruc et ses
-                        thermes, Sète l'île singulière, Agde et ses plages.
-                    </Typography>
-                    <Typography color={'secondary'}>
-                        Le logement Studio neuf avec cuisine toute équipée, chambre indépendante avec claustra amovible
-                        qui vous isolera de la partie jour. Deux jardins à votre disposition, un face à la porte d'entrée
-                        et l'autre en hauteur avec vue sur Sète. Entrée indépendante avec parking devant la "Baraquette".
-                    </Typography>
+                <Stack maxWidth={'1040px'} m={isDesktop ? 0 : 2} borderRadius={'10px'} sx={{backgroundColor: 'rgba(0, 0, 0, 0.7)'}}>
+                    <Stack gap={3} m={2}>
+                        <Typography color={'third.main'} fontWeight={'bold'} fontSize={'1.5rem'} textAlign={'center'}>
+                            À propos de ce logement
+                        </Typography>
+                        <Typography color={'secondary'}>
+                            La "Baraquette", un havre de paix au cœur de la verdure, à proximité à pied des plages, de la
+                            ville, ses commerces, ses Halles.
+                        </Typography>
+                        <Typography color={'secondary'}>
+                            Venez vous ressourcer et découvrir la région, piste cyclable à moins de 2 mn qui vous offre la
+                            possibilité de faire le tour de l'étang en passant par Bouzigues et ses huîtres, Balaruc et ses
+                            thermes, Sète l'île singulière, Agde et ses plages.
+                        </Typography>
+                        <Typography color={'secondary'}>
+                            Le logement Studio neuf avec cuisine toute équipée, chambre indépendante avec claustra amovible
+                            qui vous isolera de la partie jour. Deux jardins à votre disposition, un face à la porte d'entrée
+                            et l'autre en hauteur avec vue sur Sète. Entrée indépendante avec parking devant la "Baraquette".
+                        </Typography>
+                    </Stack>
                 </Stack>
             </Stack>
         </Stack>
