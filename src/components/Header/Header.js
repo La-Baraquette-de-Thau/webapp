@@ -53,7 +53,7 @@ export default function Header() {
                             showLabels
                             value={displayPage}
                             onChange={(event, value) => setDisplayPage(value)}
-                            sx={{position: 'fixed', bottom: 0, width: '100%', paddingY: '10px', zIndex: 100,
+                            sx={{position: 'fixed', width: '100%', paddingY: '10px', zIndex: 100, bottom: 'env(safe-area-inset-bottom)',
                                 bgcolor: 'primary.main',
                                 '& .MuiSvgIcon-root, & .MuiBottomNavigationAction-label': {
                                     color: 'secondary.main'

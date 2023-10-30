@@ -14,7 +14,7 @@ export default function Home() {
             {display &&
                 <Stack
                     width={'100%'}
-                    height={`calc(100svh - ${isDesktop ? '60px' : '136px'})`}
+                    height={`calc(100dvh - ${isDesktop ? '60px' : '136px'})`}
                     sx={{
                         backgroundImage: `url(${wallpaperImage})`,
                         backgroundRepeat: 'no-repeat',
@@ -42,8 +42,7 @@ export default function Home() {
             }
             <Stack
                 width={'100%'}
-                height={`calc(100svh - ${isDesktop ? '60px' : '136px'})`}
-                paddingBottom={isDesktop ? '0px' : '76px'}
+                height={`calc(100dvh - ${isDesktop ? '60px' : '136px'})`}
                 justifyContent={'center'}
                 alignItems={'center'}
                 sx={{

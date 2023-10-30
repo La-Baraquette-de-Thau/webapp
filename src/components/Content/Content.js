@@ -26,7 +26,6 @@ export default function Content() {
                 display: 'flex',
                 justifyContent: 'center',
                 paddingTop: '60px',
-                maxHeight: `calc(100svh - ${isDesktop ? '60px' : '136px'})`,
             }}
         >
             <Stack
@@ -36,6 +35,7 @@ export default function Content() {
                 justifyContent={isDesktop ? 'center' : 'start'}
                 alignItems={'center'}
                 gap={2}
+                sx={{marginBottom: isDesktop ? 0 : '76px'}}
             >
                 {createElement(PAGES[displayPage])}
             </Stack>
